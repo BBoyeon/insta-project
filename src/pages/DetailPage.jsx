@@ -24,7 +24,7 @@ export default function DetailPage() {
       <img src={post.image_url} alt={post.title} />
       <h2>{post.title}</h2>
       <p>{post.content}</p>
-      <Comment postId={id} />
+      <Comment postId={id}/>
     </div>
   );
 }

@@ -30,13 +30,9 @@ export async function postComment(postId, content) {
 }
 
 export async function deleteComment(postId, commentId) {
-  const res = await fetch(`${BASE_URL}/comments/${postId}?comment_id=${commentId}`, {
+  await fetch(`${BASE_URL}/comments/${postId}?comment_id=${commentId}`, {
     method: "DELETE",
     headers,
   });
-  if (!res.ok) {
-    console.error('❌ 댓글 삭제 실패:', res.statusText);
-    throw new Error('댓글 삭제 실패');
-  }
 }
 

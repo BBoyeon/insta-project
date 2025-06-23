@@ -6,7 +6,7 @@ export default function Profile({ postCount }) {
         <img className="profile-img" src="/profile_img.png" alt="profile"/>
         <div className="profile-info">
           <div className="profile-top">
-            <h2 className="profile-id">likeLion_inha</h2> 
+            <h2 className="profile-id">@ likeLion_inha</h2> 
             <button className="btn1"> 팔로우 </button>
             <button className="btn2"> 메시지 보내기 </button>
           </div>

@@ -19,6 +19,7 @@ export default function HomePage() {
 
   if (loading) return <p>로딩 중...</p>
 
+  
   return (
     <div className="home-container">
       <Profile postCount={posts.length} />

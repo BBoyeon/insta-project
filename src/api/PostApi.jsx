@@ -16,21 +16,12 @@ const axiosInstance = axios.create({
 });
 
 export const getPosts = async () => {
-  try {
-    const res = await axiosInstance.get('/posts');
-    return res.data;
-  } catch (err) {
-    console.error('게시물 불러오기 실패:', err);
-    return [];
-  }
+  const res = await axiosInstance.get('/posts');
+  return res.data;
 };
 
 export const getPostById = async (id) => {
-  try {
-    const res = await axiosInstance.get(`/posts/${id}`);
-    return res.data;
-  } catch (err) {
-    console.error('게시물 상세 불러오기 실패:', err);
-    return null;
-  }
+  const res = await axiosInstance.get(`/posts/${id}`);
+  return res.data;
 };
+
