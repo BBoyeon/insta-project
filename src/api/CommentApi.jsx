@@ -13,6 +13,13 @@ const axiosInstance = axios.create({
   },
 });
 
+const headers = {
+  apikey: API_KEY,
+  Authorization: `Bearer ${API_KEY}`,
+  'Content-Type': 'application/json',
+};
+
+
 export async function getComments(postId) {
   const res = await axiosInstance.get(`/comments/${postId}`);
   return res.data;
@@ -22,10 +29,14 @@ export async function postComment(postId, content) {
   await axiosInstance.post(`/comments/${postId}`, { content });
 }
 
-export async function deleteComment(commentId) {
-  const res = await fetch(`${BASE_URL}/comments/${commentId}`, {
+export async function deleteComment(postId, commentId) {
+  const res = await fetch(`${BASE_URL}/comments/${postId}?comment_id=${commentId}`, {
     method: "DELETE",
     headers,
   });
+  if (!res.ok) {
+    console.error('❌ 댓글 삭제 실패:', res.statusText);
+    throw new Error('댓글 삭제 실패');
+  }
 }
 

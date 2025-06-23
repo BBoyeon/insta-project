@@ -31,6 +31,11 @@
   padding: 0;
 }
 
+.comment-count{
+  display: flex;
+  justify-content: right;
+}
+
 .comment-list li {
   background-color: #f1f1f1;
   padding: 0.8rem 1rem;

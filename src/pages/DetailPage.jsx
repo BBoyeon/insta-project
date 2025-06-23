@@ -5,18 +5,14 @@ import Comment from "../components/Comment";
 import './DetailPage.css';
 
 export default function DetailPage() {
-  const { id } = useParams();
+  const {id} = useParams();
   const [post, setPost] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
       const postData = await getPostById();
       const targetPost = postData.find((p) => String(p.id) === id);
       setPost(targetPost);
-      } catch (err){
-        console.error("불러오기 실패 : ",err)
-      }
     };
     fetchData();
   }, [id]);
