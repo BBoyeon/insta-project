@@ -1,0 +1,13 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  text-align: center;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}

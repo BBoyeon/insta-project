@@ -1,0 +1,50 @@
+.comment-box {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.comment-box form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.comment-box input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 60%;
+}
+
+.comment-box button {
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  background-color: #f1f1f1;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-list li button {
+  background-color: transparent;
+  border: none;
+  color: #ff3c3c;
+  font-weight: bold;
+  cursor: pointer;
+}
